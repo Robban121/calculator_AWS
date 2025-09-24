@@ -1,0 +1,880 @@
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://172.31.50.6:5050
+Press CTRL+C to quit
+127.0.0.1 - - [23/Sep/2025 18:02:58] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.50.6 - - [23/Sep/2025 18:10:40] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:15:52] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:15:52] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:16:22] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:16:22] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.0.66 - - [23/Sep/2025 18:16:52] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:16:52] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:17:27] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:17:27] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:17:57] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:17:57] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:18:08] "GET / HTTP/1.1" 404 -
+172.31.0.66 - - [23/Sep/2025 18:18:27] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:18:27] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:18:57] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:18:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:19:27] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:19:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:19:57] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:19:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:20:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:20:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:20:53] "OPTIONS /saveSum HTTP/1.1" 200 -
+[2025-09-23 18:20:53,765] ERROR in app: Exception on /saveSum [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/main.py", line 39, in save_sum
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+172.31.0.66 - - [23/Sep/2025 18:20:53] "POST /saveSum HTTP/1.1" 500 -
+172.31.0.66 - - [23/Sep/2025 18:20:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:20:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:21:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:21:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:21:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:21:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:22:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:22:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:22:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:22:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:23:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:23:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:23:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:23:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:24:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:24:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:24:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:24:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:25:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:25:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:25:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:25:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:26:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:26:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:26:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:26:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:27:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:27:28] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:27:58] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:27:58] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:28:28] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:28:28] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://172.31.50.6:5050
+Press CTRL+C to quit
+172.31.50.7 - - [23/Sep/2025 18:57:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:57:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:58:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:58:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:58:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:58:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:59:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:59:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 18:59:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 18:59:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:00:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:00:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:00:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:00:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:01:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:01:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:01:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:01:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:02:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:02:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:02:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:02:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:03:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:03:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:03:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:03:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:04:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:04:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:04:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:04:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:05:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:05:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:05:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:05:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:05:54] "GET /hudson HTTP/1.1" 404 -
+172.31.0.66 - - [23/Sep/2025 19:06:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:06:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:06:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:06:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:07:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:07:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:07:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:07:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:08:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:08:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:08:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:08:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:09:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:09:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:09:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:09:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:10:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:10:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:10:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:10:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:11:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:11:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:11:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:11:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:12:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:12:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:12:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:12:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:13:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:13:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:13:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:13:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:14:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:14:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:14:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:14:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:15:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:15:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:15:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:15:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:16:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:16:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:16:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:16:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:17:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:17:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:17:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:17:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:18:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:18:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:18:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:18:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:18:38] "GET / HTTP/1.1" 404 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.50.7 - - [23/Sep/2025 19:19:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:19:02] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.50.7 - - [23/Sep/2025 19:19:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:19:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:20:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:20:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:20:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:20:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:20:55] "OPTIONS /saveSum HTTP/1.1" 200 -
+[2025-09-23 19:20:55,454] ERROR in app: Exception on /saveSum [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/main.py", line 39, in save_sum
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+172.31.0.66 - - [23/Sep/2025 19:20:55] "POST /saveSum HTTP/1.1" 500 -
+172.31.50.7 - - [23/Sep/2025 19:21:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:21:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:21:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:21:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:22:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:22:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:22:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:22:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:23:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:23:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:23:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:23:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:24:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:24:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:24:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:24:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:25:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:25:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:25:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:25:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:26:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:26:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:26:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:26:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:27:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:27:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:27:15] "OPTIONS /saveSum HTTP/1.1" 200 -
+[2025-09-23 19:27:15,503] ERROR in app: Exception on /saveSum [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/main.py", line 39, in save_sum
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+172.31.0.66 - - [23/Sep/2025 19:27:15] "POST /saveSum HTTP/1.1" 500 -
+172.31.50.7 - - [23/Sep/2025 19:27:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:27:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:28:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:28:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:28:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:28:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:29:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:29:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:29:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:29:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:30:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:30:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:30:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:30:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:31:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:31:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:31:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:31:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:32:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:32:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:32:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:32:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:33:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:33:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:33:23] "OPTIONS /saveSum HTTP/1.1" 200 -
+[2025-09-23 19:33:23,569] ERROR in app: Exception on /saveSum [POST]
+Traceback (most recent call last):
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 176, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/ec2-user/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/ec2-user/main.py", line 39, in save_sum
+    cursor.close()
+UnboundLocalError: local variable 'cursor' referenced before assignment
+172.31.0.66 - - [23/Sep/2025 19:33:23] "POST /saveSum HTTP/1.1" 500 -
+172.31.0.66 - - [23/Sep/2025 19:33:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:33:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:34:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:34:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:34:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:34:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:35:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:35:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:35:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:35:32] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:36:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:36:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:36:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:36:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:37:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:37:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:37:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:37:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:38:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:38:03] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://172.31.50.6:5050
+Press CTRL+C to quit
+172.31.0.66 - - [23/Sep/2025 19:39:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:39:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:39:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:39:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:39:43] "POST /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:40:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:40:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:40:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:40:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:41:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:41:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:41:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:41:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:42:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:42:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:42:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:42:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:43:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:43:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:43:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:43:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:44:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:44:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:44:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:44:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:45:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:45:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:45:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:45:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:46:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:46:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:46:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:46:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:47:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:47:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:47:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:47:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:48:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:13] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:13] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:14] "OPTIONS /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:14] "POST /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:48:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:48:57] "POST /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:49:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:49:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:49:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:49:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:49:39] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:49:40] "POST /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:50:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:50:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:50:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:50:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:51:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:51:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:51:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:51:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:52:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:52:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:52:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:52:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:53:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:53:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:53:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:53:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:54:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:54:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:54:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:54:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:55:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:55:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:55:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:55:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:56:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:56:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:56:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:56:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:57:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:57:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:57:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:57:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:58:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:58:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:58:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:58:33] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:59:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:59:03] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 19:59:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 19:59:34] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 20:00:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 20:00:04] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 20:00:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 20:00:34] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 20:01:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 20:01:04] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 20:01:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 20:01:34] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [23/Sep/2025 20:02:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [23/Sep/2025 20:02:04] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://172.31.50.6:5050
+Press CTRL+C to quit
+172.31.0.66 - - [24/Sep/2025 04:38:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:38:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:39:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:39:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:40:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:40:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:41:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:41:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:41:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:41:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:42:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:42:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:42:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:42:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:43:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:43:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:43:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:43:59] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.50.7 - - [24/Sep/2025 04:44:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:44:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:44:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:44:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:45:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:45:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:45:32] "GET / HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:45:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:45:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:46:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:46:16] "GET / HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:46:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:46:43] "POST /saveSum HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:46:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:46:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:47:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:47:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:47:45] "GET /manage/account/login HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:47:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:47:52] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:47:52] "POST /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:47:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:48:15] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:48:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:48:45] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:48:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:48:59] "GET /admin/index.html HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:49:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:49:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:49:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:49:57] "GET /index.html HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:49:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:50:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:50:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:50:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:50:55] "OPTIONS /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:50:55] "POST /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:50:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:51:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:51:18] "GET /+CSCOE+/logon.html HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:51:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:51:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:51:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:52:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:52:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:52:32] "GET /cgi-bin/login.cgi HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:52:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:52:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:53:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:53:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:53:45] "GET /login.htm HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:53:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:53:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:54:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:54:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:54:33] "POST /saveDifference HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:54:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:54:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:55:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:55:27] "GET /login.html HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:55:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:55:41] "POST /saveDifference HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:55:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:55:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:56:10] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:56:11] "POST /saveDifference HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:56:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:56:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:56:39] "GET /login.jsp HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:56:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:56:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:57:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:57:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:57:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:57:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:58:00] "GET /login HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 04:58:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:58:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:58:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:58:53] "GET /doc/index.html HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:58:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:59:16] "GET /health HTTP/1.1" 200 -
+ * Serving Flask app 'main'
+ * Debug mode: off
+Address already in use
+Port 5050 is in use by another program. Either identify and stop that program, or start the server with a different port.
+172.31.0.66 - - [24/Sep/2025 04:59:29] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:59:41] "OPTIONS /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:59:41] "POST /saveSum HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 04:59:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 04:59:47] "GET /remote/login HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 04:59:59] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:00:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:00:29] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:00:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:00:53] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:00:53] "POST /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:00:59] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:01:01] "GET /admin/login.asp HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 05:01:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:01:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:01:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:02:00] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:02:00] "GET /web/ HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 05:02:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:02:30] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:02:39] "POST /saveSum HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:02:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:02:54] "GET /webpages/login.html HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 05:03:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:03:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:03:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:03:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:03:53] "POST /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:04:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:04:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:04:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:04:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:04:50] "POST /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:05:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:05:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:05:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:05:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:06:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:06:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:06:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:06:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:07:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:07:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:07:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:07:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:08:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:08:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:08:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:08:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:09:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:09:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:09:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:09:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:10:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:10:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:10:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:10:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:11:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:11:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:11:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:11:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:12:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:12:16] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:12:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:12:46] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:13:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:13:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:13:30] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:13:31] "GET / HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 05:13:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:14:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:14:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:14:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:14:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:15:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:15:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:15:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:15:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:16:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:16:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:16:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:16:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:17:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:17:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:17:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:17:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:18:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:18:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:18:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:18:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:19:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:19:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:19:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:19:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:20:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:20:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:20:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:20:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:21:00] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:21:13] "OPTIONS /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:21:13] "POST /saveSum HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:21:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:21:30] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:21:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:22:00] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:22:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:22:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:22:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:23:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:23:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:23:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:23:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:24:01] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:24:03] "GET /.git/config HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 05:24:16] "GET /.env HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 05:24:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:24:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:24:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:25:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:25:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:25:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:25:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:26:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:26:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:26:31] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:26:43] "GET /.env HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 05:26:43] "POST / HTTP/1.1" 404 -
+172.31.50.7 - - [24/Sep/2025 05:26:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:27:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:27:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:27:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:27:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:28:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:28:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:28:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:28:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:29:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:29:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:29:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:29:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:30:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:30:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:30:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:30:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:31:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:31:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:31:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:31:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:32:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:32:17] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:32:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:32:47] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:33:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:33:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:33:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:33:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:34:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:34:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:34:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:34:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:35:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:35:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:35:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:35:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:36:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:36:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:36:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:36:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:37:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:37:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:37:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:37:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:38:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:38:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:38:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:38:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:39:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:39:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:39:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:39:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:40:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:40:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:40:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:40:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:41:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:41:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:41:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:41:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:42:01] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:42:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:42:31] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:42:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:43:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:43:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:43:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:43:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:44:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:44:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:44:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:44:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:45:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:45:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:45:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:45:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:46:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:46:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:46:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:46:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:47:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:47:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:47:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:47:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:48:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:48:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:48:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:48:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:49:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:49:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:49:20] "GET / HTTP/1.1" 404 -
+172.31.0.66 - - [24/Sep/2025 05:49:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:49:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:50:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:50:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:50:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:50:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:51:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:51:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:51:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:51:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:52:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:52:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:52:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:52:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:53:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:53:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:53:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:53:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:54:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:54:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:54:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:54:48] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:55:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:55:18] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:55:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:55:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:56:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:56:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:56:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:56:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:57:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:57:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:57:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:57:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:58:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:58:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:58:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:58:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:59:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:59:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 05:59:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 05:59:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:00:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:00:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:00:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:00:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:01:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:01:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:01:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:01:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:02:02] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:02:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:02:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:02:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:03:02] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:03:18] "OPTIONS /saveSum HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:03:19] "POST /saveSum HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:03:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:03:32] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:03:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:03:59] "OPTIONS /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:04:00] "POST /saveDifference HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:04:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:04:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:04:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:04:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:05:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:05:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:05:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:05:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:06:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:06:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:06:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:06:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:07:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:07:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:07:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:07:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:08:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:08:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:08:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:08:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:09:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:09:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:09:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:09:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:10:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:10:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:10:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:10:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:11:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:11:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:11:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:11:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:12:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:12:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:12:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:12:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:13:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:13:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:13:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:13:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:14:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:14:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:14:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:14:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:15:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:15:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:15:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:15:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:16:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:16:19] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:16:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:16:49] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:17:03] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:17:20] "GET /health HTTP/1.1" 200 -
+172.31.0.66 - - [24/Sep/2025 06:17:33] "GET /health HTTP/1.1" 200 -
+172.31.50.7 - - [24/Sep/2025 06:17:50] "GET /health HTTP/1.1" 200 -
