@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Sum / Difference Calculator</h1>
+  
+  <label for="number1">Number 1:</label>
+  <input type="number" id="number1" required>
+  <br><br>
+  
+  <label for="number2">Number 2:</label>
+  <input type="number" id="number2" required>
+  <br><br>
+  
+  <button onclick="calculateAndSaveSum()">Calculate Sum</button>
+  <button onclick="calculateAndSaveDifference()">Calculate Difference</button>
+
+  <script>
+  const API_BASE = "http://calcALB-214915425.us-east-1.elb.amazonaws.com";
+
+  function calculateAndSaveSum() {
+    const number1 = parseFloat(document.getElementById('number1').value);
+    const number2 = parseFloat(document.getElementById('number2').value);
+    const sum_value = number1 + number2;
+    alert("The sum is: " + sum_value);
+
+    fetch(`${API_BASE}/saveSum`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sum_value: sum_value })
+    })
+    .then(response => response.json())
+    .then(result => alert(result.message || result.error))
+    .catch(error => console.error('Error:', error));
+  }
+
+  function calculateAndSaveDifference() {
+    const number1 = parseFloat(document.getElementById('number1').value);
+    const number2 = parseFloat(document.getElementById('number2').value);
+    const diff_value = number1 - number2;
+    alert("The difference is: " + diff_value);
+
+    fetch(`${API_BASE}/saveDifference`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ diff_value: diff_value })
+    })
+    .then(response => response.json())
+    .then(result => alert(result.message || result.error))
+    .catch(error => console.error('Error:', error));
+  }
+  </script>
+</body>
+</html>
+
